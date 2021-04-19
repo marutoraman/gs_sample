@@ -75,7 +75,7 @@ class GspreadHandler():
     
     def get_last_row(self):
         '''
-        再終行の取得
+        最終行の取得
         '''
         worksheet = self.gc.open_by_url(self.url).get_worksheet(0)
         return len(worksheet.get_all_values())
