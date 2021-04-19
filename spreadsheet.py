@@ -1,7 +1,4 @@
 import gspread
-import json
-import requests
-from .singleton import Singleton
 
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -13,7 +10,7 @@ SCOPE = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
 JSONKEY = './secrets/my-project-8844405-05992ddf0789.json' # ここに個人のSECRET JSONを指定する
 
-class GspreadHandler(Singleton):
+class GspreadHandler():
     """グーグルスプレッドシートを操作するクラス"""
     
     def __init__(self, url:str=None):
