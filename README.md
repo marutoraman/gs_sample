@@ -7,6 +7,11 @@
 - スプレッドシートを準備して公開設定（編集モード）にしてURLを取得する
 - 以下を実行して依存モジュールをインストールする<BR>
 pip install gspread pandas oauth2client
+- 実行例：指定したシートの全データをDataFrameとして取得する<BR>
+```
+gs = GspreadHandler(url="スプレッドシートのURL(公開設定かつ編集可能)")
+df=gs.get_worksheet_as_df(sheet_name="シート名")
+```
 
 ## スプレッドシートの活用方法
 データの保管場所としてCSVファイルが使われますが、データの整合性を保つのが困難であるため
